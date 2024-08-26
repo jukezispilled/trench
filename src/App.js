@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center relative">
+    <div className="h-screen w-screen flex justify-center items-center relative overflow-hidden">
       <iframe
         src="https://pump.fun/board"
         className="absolute inset-0 w-full h-full border-0 z-0"
@@ -58,16 +58,17 @@ function App() {
       >
         <source src={`${process.env.PUBLIC_URL}/vid.mp4`} type="video/mp4" />
       </video>
+      <img src="trench.png" className='absolute right-0 bottom-[35%] -rotate-[40deg] w-[80%] translate-x-[25%]'></img>
       <img 
         src="trench.png" 
         onClick={toggleTrenchPosition}
-        className={`absolute bottom-0 w-[85%] md:w-[45%] z-20 transition-all duration-500 cursor-pointer
+        className={`absolute bottom-0 w-[85%] md:w-[45%] z-20 transition-all duration-500 cursor-pointer hidden md:flex
                     ${isMediumScreen ? (trenchPosition === 'right' ? 'right-5' : 'left-5') : ''}`}
         alt="Trench" 
       />
       <button
         onClick={handleFlashback}
-        className="absolute font-custom top-5 left-5 z-30 bg-red-600 text-white rounded-md transition-colors md:text-2xl px-3 pt-2 pb-1"
+        className="absolute font-custom top-5 left-5 z-30 bg-red-600 text-white rounded-md transition-colors text-xl md:text-2xl px-3 pt-2 pb-1"
       >
         {isPlaying ? 'Stop' : 'Flashback'}
       </button>
