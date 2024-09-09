@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="h-screen w-screen flex justify-center items-center relative overflow-hidden">
       <iframe
-        src="https://pump.fun/board"
+        src="https://pump.fun/9YBPiKKXUS27bsBH1S9iDDyisWArTsvnG8udgs8GqsA4"
         className="absolute inset-0 w-full h-full border-0 z-0"
         title="Pump.fun Board"
       />
